@@ -89,7 +89,8 @@ casos-de-uso-acceso-cuentas-ayuda.png
 Inserta la imagen con este enlace relativo:
 
 ```markdown
-![Casos de uso de acceso cuentas y ayuda](imagenes/casos-de-uso-acceso-cuentas-ayuda.png)
+![Casos de uso de acceso cuentas y ayuda](imagenes/casos-de-uso-casos-cuentas-ayudas.png]()
+.png)
 ```
 
 Al revisar esta vista, conserva el nombre del archivo y actualiza la imagen. No añadas la iteración, la versión, la fecha ni tu nombre al archivo. Git conservará las versiones registradas en commits.
