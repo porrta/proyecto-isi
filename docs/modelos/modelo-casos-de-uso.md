@@ -68,7 +68,8 @@ Para cada vista, incluye un título, una frase sobre su alcance y el diagrama. T
 
 **Alcance:** [Explica qué funciones representa esta vista.]
 
-[Inserta aquí el diagrama.]
+![Casos de uso de acceso cuentas y ayuda](imagenes/casos-de-uso-casos-cuentas-ayudas.png)
+
 
 Si una decisión necesita aclaración, puedes añadir una nota breve junto al diagrama.
 
@@ -92,8 +93,7 @@ Inserta la imagen con este enlace relativo:
 
 
 ```markdown
-![Casos de uso de acceso cuentas y ayuda](imagenes/casos-de-uso-casos-cuentas-ayudas.png]()
-.png)
+![Casos de uso de acceso cuentas y ayuda](imagenes/casos-de-uso-casos-cuentas-ayudas.png)
 ```
 
 Al revisar esta vista, conserva el nombre del archivo y actualiza la imagen. No añadas la iteración, la versión, la fecha ni tu nombre al archivo. Git conservará las versiones registradas en commits.
