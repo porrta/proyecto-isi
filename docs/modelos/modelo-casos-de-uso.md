@@ -88,6 +88,9 @@ casos-de-uso-acceso-cuentas-ayuda.png
 
 Inserta la imagen con este enlace relativo:
 
+![Casos de uso de acceso cuentas y ayuda](imagenes/casos-de-uso-casos-cuentas-ayudas.png]()
+.png)
+
 ```markdown
 ![Casos de uso de acceso cuentas y ayuda](imagenes/casos-de-uso-casos-cuentas-ayudas.png]()
 .png)
