@@ -68,7 +68,7 @@ Para cada vista, incluye un título, una frase sobre su alcance y el diagrama. T
 
 **Alcance:** [Explica qué funciones representa esta vista.]
 
-![Casos de uso de acceso cuentas y ayuda](imagenes/casos-de-uso-casos-cuentas-ayudas.png)
+![Casos de uso de acceso cuentas y ayuda](imagenes/casos-de-uso-casos-cuentas-ayudas-e1.png)
 
 
 Si una decisión necesita aclaración, puedes añadir una nota breve junto al diagrama.
