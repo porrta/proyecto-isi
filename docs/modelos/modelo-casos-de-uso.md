@@ -223,21 +223,39 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 ### 6.1 Descripción detallada UC-05 — Actualizar perfil
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** UC-05: Actualizar pefil.
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** Modificar los datos de su perfil.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Usuario registrado y analista.
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** Que el usuario haya creado su perfil.
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** El usuario solicita actualizar su perfil.
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:** 
+  1. El usuario solicita actualizar su perfil.
+  2. El sistema muestra los datos actuales y distingue los que se pueden modificar de los que no.
+  3. El usuario registrado introduce los datos que quiere modificar.
+  4. El sistema verifica los nuevos datos introducidos.
+  5. El sistema valida los datos introducidos.
+  6. El sistema actualiza los datos dentro de la base de datos.
+  7. El sistema confirma la actualización.
 
 **Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
-
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+  5. a) No se introdujo el teléfono o el nombre y se han introducido solo espacios.
+     1. El sistema notifica el error y solicita que se introduzcan datos válidos.
+     2. Vuelve a 3.
+  5. b) El teléfono no sigue las reglas de formato o no se ha introducido el código de área.
+      1. El sistema solicita que se introduzca un número de teléfono correcto.
+      2. Vuelve a 3.
+  5. c) Existen datos con formato incorrecto.
+      1. El sistema encuentra y confirma los campos con formato incorrecto y solicita su cambio.
+      2. Vuelve a 3.
+  
+**Postcondiciones:** *Con éxito*: El perfil mantiene los datos modificados
+El sistema modifica el cambio.
+*Sin éxito*: Los datos del perfil no son modificados
 
 **Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
 
@@ -245,21 +263,44 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 ### 6.2 Descripción detallada UC-21 — Buscar recetas
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** UC-21: Buscar recetas
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** Encontrar los datos de la receta en el sistema.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Usuario registrado.
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** El usuario debe estar registrado y debe tener una sesión iniciada. 
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** El usuario solicita buscar recetas.
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:** 
+  1. El usuario solicita buscar recetas
+  2. El sistema solicita al usuario un término de búsqueda.
+  3. El usuario introduce los filtros a utilizar como criterio de búsqueda.
+  4. El sistema verifica si los criterios se pueden aplicar de manera simultanea
+  5. El sistema busca todas las recetas validadas que verifiquen los filtros introducidos.
+  6. El usuario introduce el término de búsqueda.
+  7. El sistema busca la receta que contenga los ingredientes o el nombre de la receta.
+  8. El sistema encuentra la receta que el usuario está buscando.
+  9. El sistema muestra las recetas encontradas
 
 **Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+  3. a) El usuario busca por frase o palabra clase.
+      1. El usuario introduce una frase o palabra clave.
+      2. El flujo vuelve al paso 4.
 
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+  3. b) El usuario busca por exclusión de ingredientes.
+     1. El usuario introduce los ingredientes excluidos.
+     2. El flujo vuelve al paso 4.
+    
+  6. a) La búsqueda no tuvo éxito
+     1. El sistema indica que no hay recetas.
+     2. El sistema muestra sugerencias de corrección.
+     3. El usuario elige una sugerencia.
+     4. El sistema corrige los datos y conserva los filtros.
+     5. El sistema muestra las nuevas recetas
+**Postcondiciones:** *Con éxito*: El usuario ha consultado el detalle de alguna receta.
+*Sin éxito*: El usuario ha sido informado de la ausencia de recetas o del fallo que impidió que la búsqueda fuera completada.
 
 **Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
 
