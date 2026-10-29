@@ -15,54 +15,54 @@
 
 ## Épica de búsqueda
 
-Como [rol], quiero [capacidad amplia], para [beneficio].
+Como usuario registrado, quiero buscar recetas siguiendo diferentes criterios, para gestionar mi dieta y controlar los síntomas de mi enfermedad.
 
 **Estado:** descompuesta en US-01, US-02 y US-03. Conserva la necesidad conjunta.
 
 ## Justificación de la división
 
-[Justificación de los resultados útiles que separa la división.]
+Dividir la búsqueda en 3 historias, una por criterio, nos facilita la medición y comprobación de resultados obtenibles.
 
 ## US-01
 
-**Título:** [Capacidad]
+**Título:** Buscar recetas por ingrediente incluido
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como usuario registrado, quiero un sistema que permita buscar recetas que contengan un ingrediente, para obtener un listado de recetas que dispongan de ese ingrediente.
 
 **Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** Dado que existen varias recetas con un mismo ingrediente, cuando el usuario busque ese ingrediente, entonces el sistema mostrará todas las recetas que contengan ese ingrediente.
+- **CA-02.** Dado que no existe un ingrediente en la base de datos, cuando el usuario busca ese ingrediente, entonces el sistema muestra un mensaje que comunique que no se ha encontrado el ingrediente.
+- **CA-03.** Dado que existe un ingrediente, pero ninguna receta lo contiene, cuando el usuario busca ese ingrediente, entonces el sistema muestra un mensaje que comunique que no se ha encontrado la receta.
 
 ## US-02
 
-**Título:** [Capacidad]
+**Título:** Buscar recetas por palabra o frase clave.
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como usuario registrado, quiero buscar recetas por palabra clave, para obtener un listado de recetas que cumplan mis criterios.
 
 **Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** Dado que hay recetas que contienen la frase clave "sin gluten", cuando el usuario realiza una búsqueda por la frase clave "sin gluten", entonces el sistema muestra esas recetas
+- **CA-02.** Dado que no existe una frase clave, cuando el usuario busca esa frase, entonces el sistema muestra un mensaje que comunique que no se ha encontrado el ingrediente.
 - **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
 
 ## US-03
 
-**Título:** [Capacidad]
+**Título:** Buscar recetas por ingrediente excluido
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como usuario registrado, quiero buscar recetas sin un ingrediente por palabra clave, para obtener un listado de recetas que no contenga ese ingrediente.
 
 **Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** Dado que hay recetas que no contengan la frase clave, cuando el usuario busque esa frase , entonces el sistema muestra un listado de recetas sin ese ingrediente.
+- **CA-02.** Dado que no existen recetas sin ese ingrediente, cuando el usuario busque esa frase, entonces el sistema muestra un mensaje de error .
 - **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
 
 ## Revisión INVEST
